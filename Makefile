@@ -70,6 +70,7 @@ LIBS += lib/lib$(ARCH).a
 LIBS += fs/fat/libfat.a
 LIBS += disk/libdisk.a
 LIBS += drivers/libdrivers.a
+LIBS += common/libcommon.a
 .PHONY : $(LIBS)
 
 # Add GCC lib
@@ -154,6 +155,12 @@ am3517evm_config :       unconfig
 
 craneboard_config :       unconfig
 	@./mkconfig $(@:_config=) arm omap3 craneboard
+
+craneboarddownload_config :       unconfig
+	@./mkconfig craneboard arm omap3 craneboard; \
+	echo "#define START_LOADB_DOWNLOAD" >> ./include/config-2.h; \
+	cat ./include/config.h >> ./include/config-2.h; \
+	mv ./include/config-2.h ./include/config.h
 
 #########################################################################
 

@@ -39,8 +39,15 @@
 
 #define CONFIG_CRANEBOARD	1    /* working with CraneBoard */
 
+/* Disabling CONFIG_MMC when serial download config (loadb)is used.
+ * If loadb and MMC support are enabled together, the size of x-loader
+ * (code + data) becomes greater than 32K - the size of SRAM. So don't enable
+ * them together.
+ */
+#if !defined(START_LOADB_DOWNLOAD)
 /* Enable the below macro if MMC boot support is required */
 #define CONFIG_MMC               1
+#endif
 
 #if defined(CONFIG_MMC)
 	#define CFG_CMD_MMC              1

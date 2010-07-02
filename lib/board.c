@@ -35,6 +35,7 @@
 
 extern int misc_init_r (void);
 extern u32 get_mem_type(void);
+extern int do_load_serial_bin(ulong , int);
 
 #ifdef CFG_PRINTF
 int print_info(void)
@@ -61,7 +62,6 @@ init_fnc_t *init_sequence[] = {
 void start_armboot (void)
 {
   	init_fnc_t **init_fnc_ptr;
- 	int i;
 	uchar *buf;
 
    	for (init_fnc_ptr = init_sequence; *init_fnc_ptr; ++init_fnc_ptr) {
@@ -70,9 +70,13 @@ void start_armboot (void)
 		}
 	}
 
+#ifdef START_LOADB_DOWNLOAD
+	do_load_serial_bin(CFG_LOADADDR, 115200);
+#else
 	misc_init_r();
 	buf =  (uchar*) CFG_LOADADDR;
 
+	int i;
 	if ((get_mem_type() == MMC_ONENAND) || (get_mem_type() == MMC_NAND)){
 		buf += mmc_boot(buf);
 	}
@@ -90,9 +94,7 @@ void start_armboot (void)
 				buf += NAND_BLOCK_SIZE; /* advance buf ptr */
 		}
 	}
-
-
-
+#endif
 	if (buf == (uchar *)CFG_LOADADDR)
 		hang();
 
