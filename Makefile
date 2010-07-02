@@ -152,6 +152,9 @@ omap3evm_config :	unconfig
 am3517evm_config :       unconfig
 	@./mkconfig $(@:_config=) arm omap3 am3517evm
 
+craneboard_config :       unconfig
+	@./mkconfig $(@:_config=) arm omap3 craneboard
+
 #########################################################################
 
 clean:

@@ -32,7 +32,7 @@ void gpmc_init(void);
 void ether_init(void);
 void watchdog_init(void);
 void set_muxconf_regs(void);
-u32 is_cpu_family();
+u32 is_cpu_family(void);
 u32 get_cpu_type(void);
 u32 get_cpu_rev(void);
 u32 cpu_is_3410(void);
