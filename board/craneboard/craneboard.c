@@ -110,12 +110,12 @@ u32 get_mem_type(void)
 	switch (mem_type) {
 
 	case 1:
+	case 12:
+	case 15:
 	case 21:
 	case 27:
 		return GPMC_NAND;
 	case 13:
-	case 12:
-	case 15:
 	case 16:
 	case 17:
 	case 18:
