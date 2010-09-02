@@ -190,7 +190,7 @@ int nand_chip()
 #if defined (CONFIG_OMAP34XX) || defined (CONFIG_OMAP3EVM)
 			return (mfr != MT29F1G_MFR || !(id == MT29F1G_ID || id == MT29F2G_ID));
 #elif defined(CONFIG_AM3517EVM) || defined(CONFIG_AM3517TEB) || \
-		defined(CONFIG_CRANEBOARD)
+		defined(CONFIG_AM3517CRANE)
 		return (mfr != MT29F1G_MFR && !(id == MT29F1G_ID || id == MT29F2G_ID));
 #endif
 		else

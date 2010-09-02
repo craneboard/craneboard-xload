@@ -153,11 +153,11 @@ omap3evm_config :	unconfig
 am3517evm_config :       unconfig
 	@./mkconfig $(@:_config=) arm omap3 am3517evm
 
-craneboard_config :       unconfig
-	@./mkconfig $(@:_config=) arm omap3 craneboard
+am3517crane_config :       unconfig
+	@./mkconfig $(@:_config=) arm omap3 am3517crane
 
-craneboarddownload_config :       unconfig
-	@./mkconfig craneboard arm omap3 craneboard; \
+am3517crane_download_config :       unconfig
+	@./mkconfig am3517crane arm omap3 am3517crane; \
 	echo "#define START_LOADB_DOWNLOAD" >> ./include/config-2.h; \
 	cat ./include/config.h >> ./include/config-2.h; \
 	mv ./include/config-2.h ./include/config.h
@@ -178,6 +178,7 @@ clobber:	clean
 	rm -f $(OBJS) *.bak tags TAGS
 	rm -fr *.*~
 	rm -f x-load x-load.map $(ALL)
+	rm -f x-load.bin.ift
 	rm -f include/asm/proc include/asm/arch
 
 mrproper \

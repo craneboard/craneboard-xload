@@ -1,6 +1,7 @@
 #
 # (C) Copyright 2010 Mistral Solutions Pvt Ltd. <www.mistralsolutions.com>
 # Umesh Krishnan <umeshk@mistralsolutions.com>
+#
 # This file is copied from board/am3517evm/Makefile
 #
 # See file CREDITS for list of people who contributed to this
@@ -26,7 +27,7 @@ include $(TOPDIR)/config.mk
 
 LIB	= lib$(BOARD).a
 
-OBJS	:= craneboard.o
+OBJS	:= am3517crane.o
 SOBJS	:= platform.o
 
 $(LIB):	$(OBJS) $(SOBJS)

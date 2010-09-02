@@ -33,7 +33,7 @@
 #include <asm/arch/sys_info.h>
 #include <asm/arch/clocks.h>
 #include <asm/arch/mem.h>
-#include "craneboard.h"
+#include "am3517crane.h"
 
 /* Used to index into DPLL parameter tables */
 struct dpll_param {

@@ -37,7 +37,7 @@
 #define CONFIG_ARMCORTEXA8	1    /* This is an ARM V7 CPU core */
 #define CONFIG_OMAP		1    /* in a TI OMAP core */
 
-#define CONFIG_CRANEBOARD	1    /* working with CraneBoard */
+#define CONFIG_AM3517CRANE	1    /* working with CraneBoard */
 
 /* Disabling CONFIG_MMC when serial download config (loadb)is used.
  * If loadb and MMC support are enabled together, the size of x-loader
@@ -133,7 +133,7 @@
 
 #define GPMC_CONFIG              (OMAP34XX_GPMC_BASE+0x50)
 
-#if defined(CONFIG_CRANEBOARD)
+#if defined(CONFIG_AM3517CRANE)
 #define GPMC_NAND_COMMAND_0      (OMAP34XX_GPMC_BASE+0x7C)
 #define GPMC_NAND_ADDRESS_0      (OMAP34XX_GPMC_BASE+0x80)
 #define GPMC_NAND_DATA_0         (OMAP34XX_GPMC_BASE+0x84)

@@ -2,7 +2,7 @@
  * (C) Copyright 2010 Mistral Solutions Pvt Ltd. <www.mistralsolutions.com>
  * Umesh Krishnan <umeshk@mistralsolutions.com>
  *
- * Header file for board/craneboard/craneboard.c
+ * Header file for board/am3517crane/am3517crane.c
  *
  * See file CREDITS for list of people who contributed to this
  * project.

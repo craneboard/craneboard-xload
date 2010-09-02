@@ -44,7 +44,7 @@ ifeq ($(BOARD), am3517evm)
 OBJS    += k9f1g08r0a.o
 endif
 
-ifeq ($(BOARD), craneboard)
+ifeq ($(BOARD), am3517crane)
 OBJS    += k9f1g08r0a.o
 endif
 
