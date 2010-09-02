@@ -26,23 +26,23 @@
 #define MAX_SIL_INDEX	3
 
 /* Definitions for EMIF4 configuration values */
-#define	EMIF4_TIM1_T_RP		0x3
-#define	EMIF4_TIM1_T_RCD	0x3
-#define	EMIF4_TIM1_T_WR		0x3
-#define	EMIF4_TIM1_T_RAS	0x8
-#define	EMIF4_TIM1_T_RC		0xA
-#define	EMIF4_TIM1_T_RRD	0x2
-#define	EMIF4_TIM1_T_WTR	0x2
+#define	EMIF4_TIM1_T_RP		0x2
+#define	EMIF4_TIM1_T_RCD	0x2
+#define	EMIF4_TIM1_T_WR		0x2
+#define	EMIF4_TIM1_T_RAS	0x7
+#define	EMIF4_TIM1_T_RC		0x9
+#define	EMIF4_TIM1_T_RRD	0x1
+#define	EMIF4_TIM1_T_WTR	0x1
 
-#define	EMIF4_TIM2_T_XP		0x2
-#define	EMIF4_TIM2_T_ODT	0x0
-#define	EMIF4_TIM2_T_XSNR	0x1C
-#define	EMIF4_TIM2_T_XSRD	0xC8
+#define	EMIF4_TIM2_T_XP		0x1
+#define	EMIF4_TIM2_T_ODT	0x2
+#define	EMIF4_TIM2_T_XSNR	0xE
+#define	EMIF4_TIM2_T_XSRD	0xC7
 #define	EMIF4_TIM2_T_RTP	0x1
 #define	EMIF4_TIM2_T_CKE	0x2
 
 #define	EMIF4_TIM3_T_TDQSCKMAX	0x0
-#define	EMIF4_TIM3_T_RFC	0x25
+#define	EMIF4_TIM3_T_RFC	0xD
 #define	EMIF4_TIM3_T_RAS_MAX	0x7
 
 #define	EMIF4_PWR_IDLE		0x2
