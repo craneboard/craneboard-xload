@@ -42,7 +42,7 @@
 #define	EMIF4_TIM2_T_CKE	0x2
 
 #define	EMIF4_TIM3_T_TDQSCKMAX	0x0
-#define	EMIF4_TIM3_T_RFC	0xD
+#define	EMIF4_TIM3_T_RFC	0x15
 #define	EMIF4_TIM3_T_RAS_MAX	0x7
 
 #define	EMIF4_PWR_IDLE		0x2
@@ -66,7 +66,7 @@
 #define	EMIF4_CFG_SDR_DRV	0x0
 #define	EMIF4_CFG_CWL		0x0
 #define	EMIF4_CFG_NARROW_MD	0x0
-#define	EMIF4_CFG_CL		0x5
+#define	EMIF4_CFG_CL		0x6
 #define	EMIF4_CFG_ROWSIZE	0x0
 #define	EMIF4_CFG_IBANK		0x3
 #define	EMIF4_CFG_EBANK		0x0
